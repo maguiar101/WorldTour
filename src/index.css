@@ -1,0 +1,97 @@
+/* ==========================================================================
+   TAILWIND CSS & EXTERNAL IMPORTS
+   ========================================================================== */
+
+/* @apply is processed by Tailwind CSS v4 */
+
+/* Import Leaflet map library styles */
+@import "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
+
+/* Import Google Fonts for custom typography */
+@import url("https://fonts.googleapis.com/css2?family=Chewy&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Slackey&display=swap");
+
+/* Import Tailwind CSS framework */
+@import "tailwindcss";
+
+/* Import plugin to hide scrollbars */
+@plugin "tailwind-scrollbar-hide";
+
+/* ==========================================================================
+   THEME CONFIGURATION
+   ========================================================================== */
+
+/* Define custom font family variables for use throughout the app */
+@theme {
+  --font-roboto: "Roboto Mono";
+  --font-slackey: "Slackey";
+  --font-chewy: "Chewy";
+  --font-ibm: "IBM Plex Mono";
+}
+
+/* ==========================================================================
+   BASE STYLES
+   ========================================================================== */
+
+/* Reset default margins and padding */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Body background with gradient overlay */
+body {
+  @apply bg-gray-600 bg-linear-to-b from-gray-700/55 to-gray-700;
+}
+
+/* ==========================================================================
+   NAVIGATION STYLES
+   ========================================================================== */
+
+/* Active state for navbar links */
+.navBarStyle .active {
+  @apply text-green-500;
+}
+
+/* Active state for navigation items with background highlight */
+.navStyle .active {
+  @apply bg-gray-900/55 -mx-1 p-1 rounded-lg transition-all duration-200;
+}
+
+/* ==========================================================================
+   BUTTON STYLES
+   ========================================================================== */
+
+/* Primary button style - green background with hover effect */
+.primary {
+  @apply bg-green-500 text-black font-bold py-2 px-3 m-1 uppercase hover:bg-green-600 cursor-pointer transition-all duration-200;
+}
+
+/* Back button style - outlined with hover effect */
+.back {
+  @apply border text-white font-bold py-2 px-3 m-1 uppercase hover:bg-gray-800/55 cursor-pointer transition-all duration-200;
+}
+
+/* Position button - fixed at bottom center of map */
+.position {
+  @apply absolute bottom-10 left-[40%] z-1000 bg-green-500 text-black font-bold py-2 px-3 uppercase hover:bg-green-600 cursor-pointer transition-all duration-200;
+}
+
+/* ==========================================================================
+   LIST & CITY STYLES
+   ========================================================================== */
+
+/* List item horizontal padding */
+li {
+  @apply px-1;
+}
+
+/* City heading style */
+.city h6 {
+  @apply uppercase text-sm text-gray-300;
+}
+
+/* Active city item highlight with left border accent */
+.cityItem--active {
+  @apply border-green-400/75 border-l-6 border-2 bg-gray-500/55;
+}
