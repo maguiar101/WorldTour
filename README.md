@@ -1,1 +1,1 @@
-***This website is not yet live***
+THIS WEBSITE IS NOT YET ACTIVE
