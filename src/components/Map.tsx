@@ -12,7 +12,7 @@
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import { useEffect, useState } from "react";
 import { useMap, useMapEvents } from "react-leaflet/hooks";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import Button from "./Button.tsx";
 import { useCities } from "./contexts/CitiesContext.tsx";
